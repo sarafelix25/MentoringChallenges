@@ -31,7 +31,7 @@ print(calculateComplete)
 
 //Quantas vezes preciso encher o tanque para percorrer 450km
 func calculate450km(kilometer: Double, liter: Double) -> Double {
-    return calculateComplete/liter * 0.1
+    return liter/kilometer
 }
 
 let calculate450 = calculate450km(kilometer: 450 , liter: 45)
