@@ -1,20 +1,12 @@
 import UIKit
 
-func averages() {
-    let average = [13, 32, 30, 29, 18, 51, 40, 79, 17]
+func averages(average: [Int]) -> Int {
+    let soma = average.reduce(0,+)
+    let quantities = average.count
+    let media = soma/quantities
 
-    // -18
-    var lessAverage = average.filter( { $0 < 18})
+    return media
 
-    // 19 e 40
-    var betweenAverage = average.filter( { $0 < 40}).filter( {$0 > 19})
-
-    // +41
-    var aboveAverage = average.filter({ $0 > 41})
-
-    // average all ages
-    var allAges = average.reduce(0,+)/average.count
 }
 
-averages()
-
+averages(average: [13, 22, 4, 39, 20, 45, 81])
